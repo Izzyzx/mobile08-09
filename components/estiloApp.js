@@ -10,7 +10,7 @@ const estilo = StyleSheet.create({
   },
 
   container: {
-    backgroundColor: '#f4f5f9',
+    backgroundColor: '#dfe4ccff',
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -21,7 +21,7 @@ const estilo = StyleSheet.create({
   },
 
   item: {
-    backgroundColor: '#fff',
+    backgroundColor: '#c8aef3ff',
     flex: 1,
     marginBottom: 10,
     marginRight: 10,

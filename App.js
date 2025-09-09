@@ -3,9 +3,9 @@ import { Text, View, FlatList } from 'react-native';
 import estilo from './components/estiloApp';
 
 const request = async (callback) => {
-  const response = await fetch('https://swapi.dev/api/people/');
+  const response = await fetch('https://emojihub.yurace.pro/api/all');
   const parsed = await response.json();
-  callback(parsed.results);
+  callback(parsed);
 };
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
   return (
     <View style={estilo.container}>
       <Text style={estilo.superior}>
-        StarWars
+        emojihub
       </Text>
 
       <FlatList
@@ -26,8 +26,9 @@ export default function App() {
         keyExtractor={(item) => item.name.toString()}
         renderItem={({ item }) => (
           <Text style={estilo.item}>
-            <Text>Nome: {item.name}{'\n'}</Text>
-            <Text>Peso: {item.mass}{'\n'}</Text>
+            <Text>Name: {item.name}{'\n'}</Text>
+            <Text>Category: {item.category}{'\n'}</Text> 
+            <Text>Group: {item.group}{'\n'}</Text>
           </Text>
         )}
       />
